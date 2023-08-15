@@ -21,7 +21,7 @@ stubs.o: stubs.c
 	$(CC) $(CFLAGS) -c stubs.c
 
 deploy-%:
-	@echo "Deploying $*"
+	@openocd -f interface/stlink.cfg -f target/stm32g0x.cfg -c "program src/$*/$*.elf verify reset exit"
 
 clean: 
 	rm -f *.o
