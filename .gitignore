@@ -5,3 +5,5 @@ src/*/*.o
 src/*/*.elf
 
 .cache/
+
+compile_commands.json
